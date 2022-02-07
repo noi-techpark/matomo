@@ -15,6 +15,14 @@ pipeline {
           rm -f .env
           echo 'COMPOSE_PROJECT_NAME=${DOCKER_PROJECT_NAME}' >> .env
           echo 'SERVER_PORT=${SERVER_PORT}' >> .env
+          echo 'MYSQL_PASSWORD=' >> .env
+          echo 'MYSQL_DATABASE=matomo' >> .env
+          echo 'MYSQL_USER=matomo' >> .env
+          echo 'MATOMO_DATABASE_ADAPTER=mysql' >> .env
+          echo 'MATOMO_DATABASE_TABLES_PREFIX=matomo_' >> .env
+          echo 'MATOMO_DATABASE_USERNAME=matomo' >> .env
+          echo 'MATOMO_DATABASE_PASSWORD=' >> .env
+          echo 'MATOMO_DATABASE_DBNAME=matomo' >> .env
         """
       }
     }
