@@ -6,6 +6,7 @@ pipeline {
     AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     DOCKER_PROJECT_NAME = "matomo"
     SERVER_PORT = "1042"
+    
   }
 
   stages {
